@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--dodati meta tag bitan za stranicu-->
+		<meta name="keywords" content="Music, Songs, Spotify, Database">
+		<meta name="description" content="Ispis tablice sa pjesmama - glavna stranica html projekta">
+		<!--dodati link za css dokumente -->
+		<link rel="stylesheet" href="style.css">
+		<title>Indeks pjesama</title> 
+	</head>
+	<body>
+		<header>
+		<h1>Dobrodosli na moju web stranicu</h1>
+		</header>
+		<!-- <header>
+       <nav aria-labelledby="primarna-navigacija">
+        <h2 id="primarna-navigacija">Primarna navigacija</h2>
+        
+        </nav>
+        </header>
+    -->
+		<!-- GUMB za prikaz navigacije (CSS only) -->
+		<div class="menu-wrapper">
+			<button class="menu-btn">☰ Izbornik</button>
+
+			<nav aria-label="Glavna navigacija">
+				<ul class="nav-menu">
+					<li><a href="index.html">Popis pjesama</a></li>
+					<li><a href="grafikon.html">Statistike</a></li>
+					<li><a href="slike.html">Slike</a></li>
+				</ul>
+			</nav>
+		</div>
+		<main class="grid-layout">
+			<section>
+				<h1>Popis Pjesama</h1>
+
+				<table>
+					<tr>
+						<th>ID</th>
+						<th>Naslov</th>
+						<th>Grupa</th>
+						<th>Spotify Link</th>
+						<th>Oznake</th>
+						<th>Trajanje (ms)</th>
+					</tr>
+					<tr>
+					<td>TRIOREW128F424EAF0</td>
+					<td>Mr. Brightside</td>
+					<td>The Killers</td>
+					<td><a href="https://p.scdn.co/mp3-preview/4d26180e6961fd46866cd9106936ea55dfcbaa75?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, alternative_rock, indie_rock, 00s</td>
+					<td>222200</td>
+					</tr>
+					<tr>
+					<td>TRRIVDJ128F429B0E8</td>
+					<td>Wonderwall</td>
+					<td>Oasis</td>
+					<td><a href="https://p.scdn.co/mp3-preview/d012e536916c927bd6c8ced0dae75ee3b7715983?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, pop, alternative_rock, british, 90s, love, britpop</td>
+					<td>258613</td>
+					</tr>
+					<tr>
+					<td>TROUVHL128F426C441</td>
+					<td>Come as You Are</td>
+					<td>Nirvana</td>
+					<td><a href="https://p.scdn.co/mp3-preview/a1c11bb1cb231031eb20e5951a8bfb30503224e9?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, alternative_rock, 90s, grunge</td>
+					<td>218920</td>
+					</tr>
+					<tr>
+					<td>TRUEIND128F93038C4</td>
+					<td>Take Me Out</td>
+					<td>Franz Ferdinand</td>
+					<td><a href="https://p.scdn.co/mp3-preview/399c401370438be449c2aebff816ba8c62559871?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, alternative_rock, indie_rock, british, 00s, britpop</td>
+					<td>237026</td>
+					</tr>
+					<tr>
+					<td>TRLNZBD128F935E4D8</td>
+					<td>Creep</td>
+					<td>Radiohead</td>
+					<td><a href="https://p.scdn.co/mp3-preview/e7eb60e9466bc3a27299ea8803aadf4fa9cf795c?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, alternative_rock, indie_rock, british, 90s, britpop</td>
+					<td>238640</td>
+					</tr>
+					<tr>
+					<td>TRUMISQ128F9340BEE</td>
+					<td>Somebody Told Me</td>
+					<td>The Killers</td>
+					<td><a href="https://p.scdn.co/mp3-preview/0d07673cfb46218a49c96eed639933f19b45cf9c?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, pop, alternative_rock, indie_rock</td>
+					<td>198480</td>
+					</tr>
+					<tr>
+					<td>TRVCCWR128F9304A30</td>
+					<td>Viva la Vida</td>
+					<td>Coldplay</td>
+					<td><a href="https://p.scdn.co/mp3-preview/ab747fed1bfab2ac2c8ef7a260822520f6345113?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, pop, alternative_rock, british, britpop</td>
+					<td>235384</td>
+					</tr>
+					<tr>
+					<td>TRXOGZT128F424AD74</td>
+					<td>Karma Police</td>
+					<td>Radiohead</td>
+					<td><a href="https://p.scdn.co/mp3-preview/5a09f5390e2862af1687f3671db3d6f84a813a45?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, alternative_rock, indie_rock, british, 90s, britpop</td>
+					<td>264066</td>
+					</tr>
+					<tr>
+					<td>TRMZXEW128F9341FD5</td>
+					<td>The Scientist</td>
+					<td>Coldplay</td>
+					<td><a href="https://p.scdn.co/mp3-preview/95cb9df1b056d759920b5e85ad7f9aff0a390671?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, pop, alternative_rock, british, piano, love</td>
+					<td>311014</td>
+					</tr>
+					<tr>
+					<td>TRUJIIV12903CA8848</td>
+					<td>Clocks</td>
+					<td>Coldplay</td>
+					<td><a href="https://p.scdn.co/mp3-preview/24c7fe858b234e3cb21872cd03ab44b669163fbb?cid=774b29d4f13844c495f206cafdad9c86">Link</a></td>
+					<td>rock, alternative, indie, pop, alternative_rock, british, chillout</td>
+					<td>307879</td>
+					</tr>
+				</table>
+			</section>
+
+			<!-- ASIDE (slike + dodatni sadržaj) -->
+			<aside aria-label="Dodatni sadržaj">
+
+				<h3>Popularne pjesme</h3>
+
+				<!-- Responsive slika -->
+				<picture>
+					<!-- manji ekran -->
+					<source media="(max-width: 768px)" srcset="https://i1.sndcdn.com/artworks-KSKylFZ35LNeKitz-rNyeNg-t500x500.jpg">
+					
+					<!-- veći ekran -->
+					<img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Wonderwall_cover.jpg/250px-Wonderwall_cover.jpg" alt="Wonderwall">
+				</picture>
+
+				<p>Popularno danas: Wonderwall.</p>
+
+			</aside>
+		</main>
+
+		<!-- Dodatna sekcija -->
+		<section class="content">
+			<h2>O projektu</h2>
+			<p>Ova stranica prikazuje bazu podataka pjesama koristeći HTML i CSS.</p>
+		</section>
+
+		<article>
+			<h2>Najnovije vijesti</h2>
+			<p>Nova glazba izlazi svakodnevno - pratite trendove!</p>
+		</article>
+		
+
+		<!--dodati odgovarajuće elemente na temelju danog zadatka: tablice, slike, tekst
+		Nepotrebno obrisati! -->
+		<footer>
+		<p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+		</footer>
+	</body>
+	</html>

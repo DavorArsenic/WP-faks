@@ -1,0 +1,116 @@
+/* =========================
+   GLOBALNE VARIJABLE
+   (lakša promjena kroz projekt)
+========================= */
+:root {
+    --rock: #3498db;
+    --indie: #2ecc71;
+    --pop: #f1c40f;
+    --britpop: #9b59b6;
+
+    --chart-size: 250px;
+}
+
+/* =========================
+   KONTEJNER
+========================= */
+.chart-container {
+    text-align: center;
+    padding: 40px;
+}
+
+/* =========================
+   PIE CHART (stvarni podaci)
+========================= */
+/* Grafikon je napravljen na temelju podataka iz tablice pjesama.
+   Žanrovi su grupirani radi preglednosti. */
+.pie-chart {
+    width: var(--chart-size);
+    height: var(--chart-size);
+    border-radius: 50%;
+    margin: 30px auto;
+
+    background: conic-gradient(
+        var(--rock) 0% 40%,     /* Rock + Alternative */
+        var(--indie) 40% 65%,   /* Indie */
+        var(--pop) 65% 85%,     /* Pop */
+        var(--britpop) 85% 100% /* Britpop */
+    );
+
+    /* animacija učitavanja */
+    animation: growChart 1.5s ease-out;
+}
+
+/* =========================
+   ANIMACIJA
+========================= */
+@keyframes growChart {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   HOVER EFEKT
+========================= */
+.pie-chart:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    transition: 0.3s;
+}
+
+/* =========================
+   TOOLTIP (bez JS)
+========================= */
+.pie-chart::after {
+    content: "Rock 40% | Indie 25% | Pop 20% | Britpop 15%";
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* =========================
+   LEGENDA
+========================= */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+/* boje */
+.rock { background: var(--rock); }
+.indie { background: var(--indie); }
+.pop { background: var(--pop); }
+.britpop { background: var(--britpop); }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    /* manji graf na mobitelu */
+    :root {
+        --chart-size: 180px;
+    }
+
+    /* legenda u stupcu */
+    .legend {
+        flex-direction: column;
+        align-items: center;
+    }
+}
