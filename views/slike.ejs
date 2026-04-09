@@ -35,15 +35,22 @@
 			<!-- putanja (href) u tagu a je drugačija kad se koristi lightbox od onoga kada želimo da se 
 							otvori u novom tabu -->
 
-			<% images.forEach(image => { %>
-                
-                <figure class="galerija-slika">
-                <img src="<%= image.url %>" alt="<%= image.title %>">
-                <figcaption><%= image.title %></figcaption>
-                </figure>
+			<% images.forEach((image, index) => { %>
 
-            <% }) %>
+				<figure class="galerija_slika">
+					<a href="#img<%= index %>">
+						<img src="<%= image.url %>" alt="<%= image.title %>" loading="lazy">
+					</a>
+					<figcaption><%= image.title %></figcaption>
+				</figure>
 
+				<div id="img<%= index %>" class="lightbox">
+					<a href="#" class="close">×</a>
+					<img src="<%= image.url %>" alt="<%= image.title %>">
+				</div>
+
+			<% }) %>
+			
 		</section>
 		<footer>
 		<p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
