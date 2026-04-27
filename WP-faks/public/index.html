@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Music, Songs, Spotify, Database">
+		<meta name="description" content="Ispis tablice sa pjesmama - glavna stranica html projekta">
+		<link rel="stylesheet" href="style.css">
+		<title>Indeks pjesama</title> 
+	</head>
+	<body>
+		<header>
+		<h1>Dobrodosli na moju web stranicu</h1>
+		</header>
+
+		<div class="menu-wrapper">
+			<button class="menu-btn">Izbornik</button>
+
+			<nav aria-label="Glavna navigacija">
+				<ul class="nav-menu">
+					<li><a href="index.html">Popis pjesama</a></li>
+					<li><a href="grafikon.html">Statistike</a></li>
+					<li><a href="/slike">Slike</a></li>
+				</ul>
+			</nav>
+		</div>
+		<main class="grid-layout">
+			<section>
+				<h2>Filteri</h2>
+
+				<div class="filters">
+
+					<!-- ŽANROVI (checkbox dropdown) -->
+					<div class="dropdown">
+						<button onclick="toggleGenreDropdown()">Žanrovi</button>
+						<div id="genre-dropdown" class="dropdown-content"></div>
+					</div>
+
+					<!-- RASPOLOŽENJE (checkbox dropdown) -->
+					<div class="dropdown">
+						<button onclick="toggleMoodDropdown()">Raspoloženje</button>
+						<div id="mood-dropdown" class="dropdown-content"></div>
+					</div>
+
+					<!-- BPM -->
+					<label>BPM: <span id="bpm-value">0-220</span></label>
+					<input type="range" id="filter-bpm" min="0" max="220" value="220">
+
+					<!-- GODINA -->
+					<input type="number" id="filter-year-from" placeholder="Godina od...">
+					<input type="number" id="filter-year-to" placeholder="Godina do...">
+
+					<!-- SEARCH -->
+					<input type="text" id="search" placeholder="Pretraži...">
+
+				</div>
+				<button onclick="dodajOdabrane()">Dodaj u playlistu</button>
+				<h1>Popis Pjesama</h1>
+
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Naslov</th>
+							<th>Izvođač</th>
+							<th>Žanr</th>
+							<th>BPM</th>
+							<th>Godina</th>
+							<th>Popularnost</th>
+							<th>Raspoloženje</th>
+						</tr>
+					</thead>
+					<tbody id="songs-table">
+						<!-- JS generira sadržaj -->
+					</tbody>
+				</table>
+			</section>
+
+			<!-- ASIDE (slike + dodatni sadržaj) -->
+			<aside aria-label="Dodatni sadržaj">
+
+				<button onclick="togglePlaylist()">Playlist</button>
+
+				<div id="playlist-container" style="display:none;">
+					<ul id="playlist"></ul>
+					<button onclick="ukloniOdabrane()">Ukloni odabrane</button>
+				</div>
+
+				<h3>Popularne pjesme</h3>
+
+				<!-- Responsive slika -->
+				<picture>
+					<!-- manji ekran -->
+					<source media="(max-width: 768px)" srcset="https://i1.sndcdn.com/artworks-KSKylFZ35LNeKitz-rNyeNg-t500x500.jpg">
+					
+					<!-- veći ekran -->
+					<img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Wonderwall_cover.jpg/250px-Wonderwall_cover.jpg" alt="Wonderwall">
+				</picture>
+
+				<p>Popularno danas: Wonderwall.</p>
+
+			</aside>
+		</main>
+
+		<!-- Dodatna sekcija -->
+		<section class="content">
+			<h2>O projektu</h2>
+			<p>Ova stranica prikazuje bazu podataka pjesama koristeći HTML i CSS.</p>
+		</section>
+
+		<article>
+			<h2>Najnovije vijesti</h2>
+			<p>Nova glazba izlazi svakodnevno - pratite trendove!</p>
+		</article>
+		
+
+		<!--dodati odgovarajuće elemente na temelju danog zadatka: tablice, slike, tekst
+		Nepotrebno obrisati! -->
+		<footer>
+		<p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+		</footer>
+		<div id="toast"></div>
+		<script src="script.js"></script>
+	</body>
+	</html>
