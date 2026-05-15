@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "naslov": "Blinding Lights",
+    "izvodac": "The Weeknd",
+    "zanr": "Synthwave",
+    "bpm": 171,
+    "godina": 2020,
+    "popularnost": 4.5,
+    "raspolozenje": "Energetic"
+  },
+  {
+    "id": 2,
+    "naslov": "Bohemian Rhapsody",
+    "izvodac": "Queen",
+    "zanr": "Rock",
+    "bpm": 72,
+    "godina": 1975,
+    "popularnost": 4.9,
+    "raspolozenje": "Dramatic"
+  },
+  {
+    "id": 3,
+    "naslov": "Bad Guy",
+    "izvodac": "Billie Eilish",
+    "zanr": "Electropop",
+    "bpm": 135,
+    "godina": 2019,
+    "popularnost": 4.3,
+    "raspolozenje": "Dark"
+  },
+  {
+    "id": 4,
+    "naslov": "Shape of You",
+    "izvodac": "Ed Sheeran",
+    "zanr": "Pop",
+    "bpm": 96,
+    "godina": 2017,
+    "popularnost": 4.2,
+    "raspolozenje": "Happy"
+  },
+  {
+    "id": 5,
+    "naslov": "Hotel California",
+    "izvodac": "Eagles",
+    "zanr": "Rock",
+    "bpm": 74,
+    "godina": 1976,
+    "popularnost": 4.8,
+    "raspolozenje": "Melancholic"
+  },
+  {
+    "id": 6,
+    "naslov": "Levitating",
+    "izvodac": "Dua Lipa",
+    "zanr": "Disco-Pop",
+    "bpm": 103,
+    "godina": 2020,
+    "popularnost": 4.4,
+    "raspolozenje": "Cheerful"
+  },
+  {
+    "id": 7,
+    "naslov": "Thunderstruck",
+    "izvodac": "AC/DC",
+    "zanr": "Hard Rock",
+    "bpm": 134,
+    "godina": 1990,
+    "popularnost": 4.7,
+    "raspolozenje": "Powerful"
+  },
+  {
+    "id": 8,
+    "naslov": "Stay",
+    "izvodac": "The Kid LAROI & Justin Bieber",
+    "zanr": "Pop",
+    "bpm": 170,
+    "godina": 2021,
+    "popularnost": 4.1,
+    "raspolozenje": "Energetic"
+  },
+  {
+    "id": 9,
+    "naslov": "Smells Like Teen Spirit",
+    "izvodac": "Nirvana",
+    "zanr": "Grunge",
+    "bpm": 117,
+    "godina": 1991,
+    "popularnost": 4.9,
+    "raspolozenje": "Aggressive"
+  },
+  {
+    "id": 10,
+    "naslov": "In the End",
+    "izvodac": "Linkin Park",
+    "zanr": "Nu Metal",
+    "bpm": 105,
+    "godina": 2000,
+    "popularnost": 4.8,
+    "raspolozenje": "Emotional"
+  },
+  {
+    "id": 11,
+    "naslov": "Superstition",
+    "izvodac": "Stevie Wonder",
+    "zanr": "Funk",
+    "bpm": 101,
+    "godina": 1972,
+    "popularnost": 4.7,
+    "raspolozenje": "Groovy"
+  },
+  {
+    "id": 12,
+    "naslov": "Don't Stop Believin'",
+    "izvodac": "Journey",
+    "zanr": "Rock",
+    "bpm": 119,
+    "godina": 1981,
+    "popularnost": 4.6,
+    "raspolozenje": "Inspirational"
+  },
+  {
+    "id": 13,
+    "naslov": "Rolling in the Deep",
+    "izvodac": "Adele",
+    "zanr": "Soul",
+    "bpm": 105,
+    "godina": 2011,
+    "popularnost": 4.7,
+    "raspolozenje": "Passionate"
+  },
+  {
+    "id": 14,
+    "naslov": "Take Five",
+    "izvodac": "Dave Brubeck",
+    "zanr": "Jazz",
+    "bpm": 174,
+    "godina": 1959,
+    "popularnost": 4.9,
+    "raspolozenje": "Relaxed"
+  },
+  {
+    "id": 15,
+    "naslov": "One More Time",
+    "izvodac": "Daft Punk",
+    "zanr": "House",
+    "bpm": 123,
+    "godina": 2000,
+    "popularnost": 4.6,
+    "raspolozenje": "Festive"
+  },
+  {
+    "id": 16,
+    "naslov": "Lose Yourself",
+    "izvodac": "Eminem",
+    "zanr": "Hip Hop",
+    "bpm": 171,
+    "godina": 2002,
+    "popularnost": 4.9,
+    "raspolozenje": "Determined"
+  },
+  {
+    "id": 17,
+    "naslov": "Dreams",
+    "izvodac": "Fleetwood Mac",
+    "zanr": "Soft Rock",
+    "bpm": 120,
+    "godina": 1977,
+    "popularnost": 4.8,
+    "raspolozenje": "Dreamy"
+  },
+  {
+    "id": 18,
+    "naslov": "Master of Puppets",
+    "izvodac": "Metallica",
+    "zanr": "Thrash Metal",
+    "bpm": 212,
+    "godina": 1986,
+    "popularnost": 4.9,
+    "raspolozenje": "Intense"
+  },
+  {
+    "id": 19,
+    "naslov": "Uptown Funk",
+    "izvodac": "Mark Ronson ft. Bruno Mars",
+    "zanr": "Funk",
+    "bpm": 115,
+    "godina": 2014,
+    "popularnost": 4.5,
+    "raspolozenje": "Funky"
+  },
+  {
+    "id": 20,
+    "naslov": "Billie Jean",
+    "izvodac": "Michael Jackson",
+    "zanr": "Pop",
+    "bpm": 117,
+    "godina": 1982,
+    "popularnost": 4.9,
+    "raspolozenje": "Danceable"
+  },
+  {
+    "id": 21,
+    "naslov": "Mr. Brightside",
+    "izvodac": "The Killers",
+    "zanr": "Indie Rock",
+    "bpm": 148,
+    "godina": 2004,
+    "popularnost": 4.7,
+    "raspolozenje": "Anthemic"
+  },
+  {
+    "id": 22,
+    "naslov": "Starboy",
+    "izvodac": "The Weeknd",
+    "zanr": "R&B",
+    "bpm": 186,
+    "godina": 2016,
+    "popularnost": 4.4,
+    "raspolozenje": "Moody"
+  },
+  {
+    "id": 23,
+    "naslov": "Another One Bites the Dust",
+    "izvodac": "Queen",
+    "zanr": "Funk Rock",
+    "bpm": 110,
+    "godina": 1980,
+    "popularnost": 4.7,
+    "raspolozenje": "Confident"
+  },
+  {
+    "id": 24,
+    "naslov": "Flowers",
+    "izvodac": "Miley Cyrus",
+    "zanr": "Pop",
+    "bpm": 118,
+    "godina": 2023,
+    "popularnost": 4.3,
+    "raspolozenje": "Empowering"
+  },
+  {
+    "id": 25,
+    "naslov": "Highway to Hell",
+    "izvodac": "AC/DC",
+    "zanr": "Hard Rock",
+    "bpm": 116,
+    "godina": 1979,
+    "popularnost": 4.8,
+    "raspolozenje": "Wild"
+  },
+  {
+    "id": 26,
+    "naslov": "Sweet Child O' Mine",
+    "izvodac": "Guns N' Roses",
+    "zanr": "Hard Rock",
+    "bpm": 125,
+    "godina": 1987,
+    "popularnost": 4.9,
+    "raspolozenje": "Romantic"
+  },
+  {
+    "id": 27,
+    "naslov": "Humble",
+    "izvodac": "Kendrick Lamar",
+    "zanr": "Hip Hop",
+    "bpm": 150,
+    "godina": 2017,
+    "popularnost": 4.6,
+    "raspolozenje": "Serious"
+  },
+  {
+    "id": 28,
+    "naslov": "Seven Nation Army",
+    "izvodac": "The White Stripes",
+    "zanr": "Garage Rock",
+    "bpm": 124,
+    "godina": 2003,
+    "popularnost": 4.7,
+    "raspolozenje": "Gritty"
+  },
+  {
+    "id": 29,
+    "naslov": "Wake Me Up",
+    "izvodac": "Avicii",
+    "zanr": "EDM",
+    "bpm": 124,
+    "godina": 2013,
+    "popularnost": 4.5,
+    "raspolozenje": "Uplifting"
+  },
+  {
+    "id": 30,
+    "naslov": "Watermelon Sugar",
+    "izvodac": "Harry Styles",
+    "zanr": "Pop",
+    "bpm": 95,
+    "godina": 2019,
+    "popularnost": 4.2,
+    "raspolozenje": "Summer Vibes"
+  }
+]

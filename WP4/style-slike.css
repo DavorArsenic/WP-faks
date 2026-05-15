@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+body {
+  font-family: 'Abel', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* GALERIJA */
+.galerija {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.galerija h1 {
+  flex-basis: 100%;
+}
+
+/* SLIKA */
+.galerija_slika {
+  width: 30%;
+  min-width: 250px;
+  position: relative;
+}
+
+.galerija_slika img {
+  width: 100%;
+  border-radius: 10px;
+
+  /* PROMJENA 1: dodan border */
+  border: 3px solid darkblue;
+
+  transition: transform 0.3s;
+}
+
+/* PROMJENA 2: jači hover zoom */
+.galerija_slika img:hover {
+  transform: scale(1.1);
+}
+
+/* CAPTION HOVER */
+.galerija_slika figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.galerija_slika:hover figcaption {
+  opacity: 1;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+/* CLOSE BUTTON */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .galerija_slika {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .galerija_slika {
+    width: 90%;
+  }
+}
