@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <p><?php echo $message; ?></p>
 
-<a href="login.php">Login</a>
+<a href="login.php" class="nav-btn">Login</a>
 <script src="script.js"></script>
 </body>
 </html>

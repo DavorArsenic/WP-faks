@@ -14,24 +14,6 @@ header {
     padding: 20px;
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu li {
-    margin: 0 15px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
 /* Sekcije */
 .content {
     padding: 40px;
@@ -92,11 +74,16 @@ header {
     align-items: center;
 }
 
-input, button {
-    width: 80%;
+.filters input,
+.filters select {
+    width: 180px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+#filter-bpm {
+    width: 220px;
 }
 
 button {
@@ -104,7 +91,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    width: 120%;
+    padding: 10px 15px;
 }
 
 button:hover {
@@ -131,11 +118,6 @@ footer {
         align-items: center;
     }
 
-    .nav-menu {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .form-flex input, .form-flex button {
         width: 100%;
     }
@@ -143,9 +125,15 @@ footer {
 
 /* GRID layout: tablica + aside */
 .grid-layout {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+section {
+    width: fit-content;
+    max-width: 1400px;
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -171,46 +159,15 @@ tr:hover {
     background-color: darkgray;
 }
 
-/* NAV skriven po defaultu */
-nav {
-    display: none;
-}
-
-/* prikaz navigacije na hover gumba */
+/* prikaz dropdown navigacije */
 .menu-btn:hover + nav,
-nav:hover {
+.menu-wrapper nav:hover {
     display: block;
     background: #333;
 }
 
-/* ASIDE */
-aside {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* slika stil */
-aside img {
-    width: 100%;
-    border-radius: 10px;
-    opacity: 0.9;
-    transition: 0.3s;
-}
-
-/* hover efekt slike */
-aside img:hover {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-
-    .grid-layout {
-        grid-template-columns: 1fr;
-    }
-
     nav {
         display: block;
     }
@@ -236,15 +193,13 @@ aside img:hover {
     text-align: left;
 }
 
-/* PRIKAŽI kad hoveraš wrapper (gumb + nav zajedno) */
-.menu-wrapper:hover nav {
-    display: block;
-}
-
 .filters {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .selected {
@@ -271,8 +226,7 @@ tr {
   max-height: 200px;
   overflow-y: auto;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 👈 2 stupca */
+  grid-template-columns: 1fr 1fr;
   gap: 5px;
 
   z-index: 10;
@@ -284,6 +238,11 @@ tr {
   align-items: center;
   gap: 8px;
 }
+
+.dropdown-content.show {
+    display: grid;
+}
+
 /* playlist */
 #playlist-container {
   margin-top: 10px;
@@ -313,4 +272,87 @@ tr {
   width: auto;
   padding: 4px 8px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .filters input,
+    .filters select,
+    .filters button,
+    #filter-bpm {
+        width: 90%;
+        max-width: 220px;
+    }
+
+    .top-nav {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.top-nav a,
+.nav-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.top-nav a:hover,
+.nav-btn:hover {
+    background: #217dbb;
+}
+
+/* ADD SONG FORMA */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    max-width: 400px;
+
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    max-width: 200px;
 }

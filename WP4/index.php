@@ -25,11 +25,38 @@ while ($row = mysqli_fetch_assoc($result)) {
 <body>
 
 <header>
-    <h1>Dobrodošao <?php echo $_SESSION['username']; ?></h1>
-    <a href="logout.php">Logout</a>
+
+    <h1>
+        Dobrodošao <?php echo $_SESSION['username']; ?>
+    </h1>
+
+    <div class="top-nav">
+
+        <a href="index.php">
+            Početna
+        </a>
+
+        <a href="my_playlist.php">
+            Moja Playlista
+        </a>
+
+        <a href="gallery.php">
+            Galerija
+        </a>
+
+        <a href="add_song.php">
+            Dodaj novu pjesmu
+        </a>
+
+        <a href="logout.php" class="logout-btn">
+            Logout
+        </a>
+
+</div>
+
 </header>
 
-<main class="grid-layout">
+<main>
 
 <section>
 
@@ -80,13 +107,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 </section>
 
-
-
 </main>
-
-<a href="my_playlist.php">Moja Playlista</a>
-<br>
-<a href="gallery.php">Galerija</a>
 
 <div id="toast"></div>
 

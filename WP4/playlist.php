@@ -3,20 +3,37 @@ include 'includes/auth.php';
 include 'includes/db.php';
 
 $userId = $_SESSION['user_id'];
-$songId = $_POST['song_id'];
+$songId = (int)$_POST['song_id'];
 
-$stmt = $conn->prepare(
-    "INSERT INTO playlist(user_id, song_id)
-     VALUES (?, ?)"
-);
+// provjera postoji li već pjesma
+$check = $conn->prepare("
+    SELECT id
+    FROM playlist
+    WHERE user_id = ? AND song_id = ?
+");
 
-$stmt->bind_param("ii", $userId, $songId);
+$check->bind_param("ii", $userId, $songId);
+$check->execute();
 
-if (!$stmt->execute()) {
-    echo "Pjesma već postoji u playlisti.";
+$result = $check->get_result();
+
+if ($result->num_rows > 0) {
+
+    echo "duplicate";
+
 } else {
-    echo "Dodano u playlistu.";
-}
 
-echo "<br><a href='index.php'>Nazad</a>";
+    $stmt = $conn->prepare("
+        INSERT INTO playlist(user_id, song_id)
+        VALUES (?, ?)
+    ");
+
+    $stmt->bind_param("ii", $userId, $songId);
+
+    if ($stmt->execute()) {
+        echo "success";
+    } else {
+        echo "error";
+    }
+}
 ?>

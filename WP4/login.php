@@ -65,7 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <p><?php echo $message; ?></p>
 
-<a href="register.php">Registracija</a>
+<a href="register.php" class="nav-btn">Registracija</a>
+
 <script src="script.js"></script>
 </body>
 </html>

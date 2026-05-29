@@ -55,7 +55,7 @@ $result = $stmt->get_result();
 </table>
 
 <br>
-<a href="index.php">Nazad</a>
+<a href="index.php" class="nav-btn">Natrag</a>
 
 </body>
 </html>

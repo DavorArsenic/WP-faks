@@ -58,16 +58,56 @@ function toggleSelect(id, row) {
 // DODAJ U PLAYLISTU
 // =====================
 function dodajOdabrane() {
+
+  let duplicateFound = false;
+  let successFound = false;
+
   odabrane.forEach(id => {
+
     fetch('playlist.php', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
       body: `song_id=${id}`
+    })
+
+    .then(res => res.text())
+
+    .then(data => {
+
+      if (data === "duplicate") {
+        duplicateFound = true;
+      }
+
+      if (data === "success") {
+        successFound = true;
+      }
+
+      // kratko čekanje da svi fetch pozivi završe
+      setTimeout(() => {
+
+        if (duplicateFound) {
+
+          prikaziObavijest(
+            "Neke pjesme već postoje u playlisti!"
+          );
+
+        } else if (successFound) {
+
+          prikaziObavijest(
+            "Dodano u playlistu!"
+          );
+
+        }
+
+      }, 200);
+
     });
+
   });
 
   odabrane = [];
-  prikaziObavijest("Dodano u playlistu!");
 }
 
 // =====================
